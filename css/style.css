@@ -1,0 +1,651 @@
+/* Reset CSS */
+
+*, ::after, ::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Navigation */
+
+nav {
+    position: fixed;
+    z-index: 200;
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(rgba(24, 24, 24, 0.26), rgba(255, 255, 255, 0));
+}
+
+.liste-nav {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    height: 100%;
+    width: 100%;
+}
+
+
+.item-nav {
+    margin: auto 15px;
+    display: flex;
+    align-items: center;
+}
+
+.item-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+    font-family: 'Righteous', cursive;
+}
+
+.item-nav a::after {
+    content: "";
+    display: block;
+    margin: 2px auto;
+    width: 0%;
+    height: 2px;
+    background: #f1f1f1;
+    transition: width 0.2s ease-in-out;
+}
+
+.item-nav a:hover::after {
+    width: 100%;
+}
+
+.logo-menu {
+    position: absolute;
+    color: #fff;
+    top: 12px;
+    left: 10px;
+    font-size: 45px;
+    display: none;
+    cursor: pointer;
+}
+
+.nav-img{
+    position: absolute;
+    height: 40px;
+    top: 18px;
+    right: 20px;
+    
+}
+
+@media screen and (max-width: 700px) {
+    .logo-menu {
+        display: block;
+    }
+
+    .liste-nav{
+        padding-top: 70px;
+        flex-direction: column;
+        height: auto;
+        position: relative;
+        display: none;
+    }
+
+    .liste-nav.active {
+        display: block;
+        background: #d45c5c;
+    }
+
+    .item-nav {
+        height: 70px;
+        justify-content: center;
+        font-size: 10px;
+    }
+
+    .nav-img {
+        top: 28px;
+    }
+
+    nav {
+        background: #d45c5c;
+        height: 90px;
+        z-index: 150;
+    }
+}
+
+/*-------------- Button  -----------------*/
+
+
+.button-scroll {
+    height: 75px;
+    width: 75px;
+    background: #f1f1f1;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.445);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: fixed;
+    right: 20px;
+    z-index: 150;
+    transition: all 0.2s ease-in-out;
+}
+
+.button-scroll:hover .button-icone{
+    color: #fff;
+}
+
+.button-scroll:hover {
+    background: #d45c5c;
+}
+
+
+.button-up {
+    bottom: 115px;
+}
+
+.button-down {
+    bottom: 20px;
+}
+
+.button-icone {
+    font-size: 40px;
+    color: #d45c5c;
+    transition: all 0.2s ease-in-out;
+}
+
+
+/* Home */
+
+.home {
+    background: url(../img/dragon-scales\(1\).svg) repeat center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home img {
+    width: 180px;   
+}
+
+
+.home h1 {
+    font-size: 45px;
+    color: #fff;
+    margin: 60px auto;
+    font-family: 'Righteous', cursive;
+    text-shadow:  0 0 2px #fff, 0 0 0px rgb(252, 252, 252);
+}
+
+@media screen and (max-width: 500px) {
+    .home h1 {
+        font-size: 30px;
+    }    
+}
+
+/* Presentation */
+
+.section-presentation {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 75vh;
+    margin: 150px auto;
+    border-radius: 25px;
+    flex-wrap: wrap;
+}
+
+.section-presentation img {
+    background-size: cover;
+    object-fit: cover;
+    height: 100%;
+    width: 700px;
+    border-radius: 15px 0 0 15px;
+}
+
+.presentation-text {
+    width: 700px;
+    border-right: rgb(221, 221, 221) 2px solid;
+    border-top: rgb(221, 221, 221) 2px solid;
+    border-bottom: rgb(221, 221, 221) 2px solid;
+    border-radius: 0 15px 15px 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.presentation-text p {
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    height: 50%;
+    margin: 20px auto;
+}
+
+.presentation-text .button {
+    display: flex;
+    align-items: flex-end;
+    justify-content: right;
+    height: 50%;
+}
+
+
+.presentation-text a {
+    display: block;
+    text-decoration: none;
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    background: #fe7e7e;
+    transition: all 0.2s ease-in-out;
+}
+
+.presentation-text a:hover {
+    background: #d45c5c;
+}
+
+.presentation-text h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 45px;
+    margin: 15px 0;
+}
+
+.presentation-text p {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 40px;
+}
+
+@media screen and (max-width: 1800px) {
+    .section-presentation {
+        width: 90%;
+    }
+
+}
+
+@media screen and (max-width : 1555px) {
+
+    .section-presentation {
+        height: auto;
+    }
+
+    .presentation-text {
+        border-right: rgb(221, 221, 221) 2px solid;
+        border-top: 0px;
+        border-bottom: rgb(221, 221, 221) 2px solid;
+        border-left: rgb(221, 221, 221) 2px solid;
+        border-radius: 0 0 15px 15px;
+    }
+
+    .section-presentation img {
+        background-size: cover;
+        object-fit: cover;
+        height: auto;
+        border-radius: 15px 15px 0 0;
+    }
+}
+
+@media screen and (max-width: 778px) {
+    .section-presentation img {
+        background-size: cover;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        border-radius: 15px 15px 0 0;
+    } 
+}
+
+@media screen and (max-width : 480px) {
+    .section-presentation img {
+        background-size: cover;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        border-radius: 15px 15px 0 0;
+    }   
+
+    .presentation-text p {
+        font-size: 16px;
+    }
+
+    .presentation-text a {
+        font-size: 14px;
+        width: 175px;
+        height: 50px;
+        line-height: 50px;
+    }
+}
+
+/* Cartes */
+
+.section-cartes {
+    background: #fe7e7e;
+    margin: 50px auto;
+    display: block;
+}
+
+
+.section-cartes h3 {
+    transform: translateY(15px);
+    text-align: center;
+    color: #fff;
+    font-size: clamp(35px, 4vw, 45px);
+    margin: 25px auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 1000;
+}
+
+.section-cartes hr {
+    color: #fff;
+    border: none;
+    border: 1px solid #fff;
+    width: 250px;
+    margin: 15px auto;
+}
+
+.container-cartes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cartes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 450px;
+    height: auto;
+    background: #ffffff;
+    margin: 25px 10px;
+    padding: 15px;
+    border-radius: 15px;
+    transition: all 0.2s ease-in-out;
+}
+
+.cartes:hover {
+    transform: translateY(-5px);
+}
+
+.cartes i {
+    color: #fe7e7e;
+    font-size: 60px;
+}
+
+.cartes h4 {
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.cartes p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin: 15px auto;
+}
+
+/*------------------ Tableau ----------------------*/
+
+.tableau h3 {
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    color: rgb(12, 12, 12);
+    position: relative;
+    overflow: hidden;
+}
+
+.tableau h3 span {
+    background: rgb(255, 255, 255);
+    padding: 0 15px;
+}
+
+.tableau h3::before {
+    content: "";
+    display: block;
+    width: 350px;
+    height: 2px;
+    position: absolute;
+    background: rgb(12, 12, 12);
+    left: 350px;
+    top: 50%;
+    margin: 0 15px;
+    z-index: -2;
+
+}
+
+.tableau h3::after {
+    content: "";
+    display: block;
+    width: 350px;
+    height: 2px;
+    position: absolute;
+    background: rgb(12, 12, 12);
+    right: 350px;
+    top: 50%;
+    margin: 0 15px;
+    z-index: -2;
+}
+
+.container-tableau {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tableau .main-table {
+    position: relative;
+    border-radius: 12px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    margin: 50px 20px;
+    padding: 50px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.tableau thead tr {
+    height: 60px;
+    background: #fe7e7e;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.tableau thead tr th {
+    font-family: 'OpenSans-Regular', sans-serif;
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.2;
+    font-weight: unset;
+    width: 350px;
+}
+
+.tableau .main-table th, .tableau table td {
+    padding: 25px;
+}
+
+.tableau .main-table tbody tr:nth-child(odd) {
+    background: #ececec;
+}
+
+.tableau .main-table tbody tr:hover {
+    background: #e6e6e6;
+}
+
+.tableau .main-table thead tr:hover {
+    background: #d45c5c;
+}
+
+.tableau .little-table {
+    display: none;
+}
+
+
+@media screen and (max-width: 640px) {
+
+    .tableau .main-table {
+        display: none;
+    }
+
+    .container-tableau {
+        flex-direction: column;
+    }
+
+    .tableau .little-table {
+        display: block;
+    }
+
+    .tableau .little-table {
+        position: relative;
+        border-radius: 12px;
+        border-collapse: collapse;
+        border-spacing: 0;
+        box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        margin: 50px 20px;
+        font-family: 'Open Sans', sans-serif;
+    }
+    
+    .tableau thead tr {
+        height: 60px;
+        background: #fe7e7e;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+    
+    .tableau thead tr th {
+        font-family: 'OpenSans-Regular', sans-serif;
+        font-size: 15px;
+        color: #fff;
+        line-height: 1.2;
+        font-weight: unset;
+        width: 350px;
+    }
+
+    .tableau .little-table tbody tr td {
+        font-size: 13px;
+    }
+    
+    .tableau .little-table th, .tableau table td {
+        padding: 25px;
+    }
+    
+    .tableau .little-table tbody tr:nth-child(odd) {
+        background: #ececec;
+    }
+    
+    .tableau .little-table tbody tr:hover {
+        background: #e6e6e6;
+    }
+    
+    .tableau .little-table thead tr:hover {
+        background: #d45c5c;
+    }
+}
+
+/*--------------- ETAPE DE CONCEPTION -----------------*/
+
+
+.conception-title {
+    margin: 40px auto;
+}
+
+.conception .main-title {
+    text-align: center;
+    font-size: clamp(30px, 4vw, 60px);
+    font-family: 'Open Sans', sans-serif;position: relative;
+    text-transform: uppercase;
+    color: rgb(12, 12, 12);
+    position: relative;
+}
+
+.conception .second-title {
+    font-family: serif;
+    text-align: center;
+    font-size: clamp(50px, 6vw, 100px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.274);
+    white-space: nowrap;
+}
+
+.conception {
+    font-size: 10px;
+}
+
+.conception p {
+    font-size: 1.7em;
+    margin: 10px 45px;
+    font-family: 'Open sans', sans-serif;
+}
+
+
+
+/*------------ Audio ------------- */
+
+
+.audio-title {
+    margin: 40px auto;
+}
+
+.section-audio .main-title {
+    text-align: center;
+    font-size: clamp(40px, 4vw, 60px);
+    font-family: 'Open Sans', sans-serif;position: relative;
+    text-transform: uppercase;
+    color: rgb(12, 12, 12);
+    position: relative;
+}
+
+.section-audio .second-title {
+    font-family: serif;
+    text-align: center;
+    font-size: clamp(70px, 6vw, 100px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.274);
+    white-space: nowrap;
+}
+
+.section-audio {
+    text-align: center;
+}
+
+.section-audio audio {
+    width: 50%;
+}
+
+
+/*--------------- FOOTER ---------------*/
+
+footer {
+    background: #d45c5c;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+    font-size: clamp(5px, 3vw, 15px);
+    text-align: center;
+}
+
+footer p {
+    color: #fff;
+    font-family: "Open sans", sans-serif;
+    font-weight: 600;
+    margin: 5px 20px;
+}
